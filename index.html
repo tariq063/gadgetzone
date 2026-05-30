@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0a0a0f">
 <title>GadgetZone – Smart Gadgets for Modern Life</title>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,11 +14,9 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">Gad<span>get</span>Zone</div>
-    <div class="nav-right">
-      <button class="cart-btn" onclick="toggleCart()">
-        🛒 Cart <span class="cart-count" id="cartCount">0</span>
-      </button>
-    </div>
+    <button class="cart-btn" onclick="toggleCart()">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
   </div>
 </nav>
 
@@ -33,12 +32,14 @@
     </div>
   </div>
   <div class="hero-visual">
-    <div class="hero-emoji">🎧</div>
-    <div class="hero-tags">
-      <span class="tag">🌀 Mini Fans</span>
-      <span class="tag">🎧 Air Buds</span>
-      <span class="tag">⌚ Smartwatch</span>
-      <span class="tag">📱 Accessories</span>
+    <div>
+      <div class="hero-emoji">🎧</div>
+      <div class="hero-tags">
+        <span class="tag">🌀 Mini Fans</span>
+        <span class="tag">🎧 Air Buds</span>
+        <span class="tag">⌚ Smartwatch</span>
+        <span class="tag">📱 Accessories</span>
+      </div>
     </div>
   </div>
 </section>
