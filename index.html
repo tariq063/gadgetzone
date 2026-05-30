@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GadgetZone – Smart Gadgets for Modern Life</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Gad<span>get</span>Zone</div>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">✦ New Arrivals 2025</div>
+    <h1>Smart Gadgets<br>For <span>Modern Life</span></h1>
+    <p>Discover premium mini fans, air buds, smartwatches and more. Quality tech at unbeatable prices — delivered to your door.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now →</button>
+      <button class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">See Features</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-emoji">🎧</div>
+    <div class="hero-tags">
+      <span class="tag">🌀 Mini Fans</span>
+      <span class="tag">🎧 Air Buds</span>
+      <span class="tag">⌚ Smartwatch</span>
+      <span class="tag">📱 Accessories</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">10K+</div><div class="stat-label">Happy Customers</div></div>
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Products</div></div>
+    <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Avg Rating</div></div>
+    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Delivery ৳999+</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section" id="products">
+  <div class="section-header">
+    <div class="section-title">Our Products</div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterProducts('all',this)">All</button>
+      <button class="filter-tab" onclick="filterProducts('fan',this)">Fans</button>
+      <button class="filter-tab" onclick="filterProducts('audio',this)">Audio</button>
+      <button class="filter-tab" onclick="filterProducts('smart',this)">Smart</button>
+    </div>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</div>
+
+<!-- FEATURES -->
+<div class="features" id="features">
+  <div class="features-inner">
+    <div class="feature"><div class="feature-icon">🚀</div><div><div class="feature-title">Fast Delivery</div><div class="feature-text">Get your order within 2–5 days across Bangladesh</div></div></div>
+    <div class="feature"><div class="feature-icon">💳</div><div><div class="feature-title">Secure Payment</div><div class="feature-text">bKash, Nagad, card & Cash on Delivery accepted</div></div></div>
+    <div class="feature"><div class="feature-icon">🔄</div><div><div class="feature-title">Easy Returns</div><div class="feature-text">7-day return policy. No questions asked.</div></div></div>
+    <div class="feature"><div class="feature-icon">🛡️</div><div><div class="feature-title">Warranty</div><div class="feature-text">All products come with manufacturer warranty</div></div></div>
+  </div>
+</div>
+
+<footer>© 2025 <strong>GadgetZone</strong> — Premium Tech at Your Fingertips · Made with ❤️ in Bangladesh</footer>
+
+<!-- CART PANEL -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <div class="cart-title">Your Cart 🛒</div>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-summary">
+      <div class="summary-row"><span>Subtotal</span><span id="subtotalAmt">৳0</span></div>
+      <div class="summary-row"><span>Delivery</span><span id="deliveryAmt">৳80</span></div>
+      <div class="summary-row total"><span>Total</span><span id="totalAmt">৳0</span></div>
+    </div>
+    <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout →</button>
+    <div class="payment-icons">
+      <span class="pay-icon">💳 Card</span>
+      <span class="pay-icon">📱 bKash</span>
+      <span class="pay-icon">🏦 Nagad</span>
+      <span class="pay-icon">🚪 COD</span>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- SCRIPTS -->
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
